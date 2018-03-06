@@ -7,8 +7,7 @@ ENV OPENRESTY_PREFIX /opt/verynginx/openresty
 ENV NGINX_PREFIX /opt/verynginx/openresty/nginx
 ENV VAR_PREFIX /var/nginx
 
-RUN sed -i 's/dl-cdn\.alpinelinux\.org/mirrors.aliyun.com/g' /etc/apk/repositories \
- && apk update \
+RUN apk update \
  && apk add --no-cache \
     ca-certificates openssl \
     libpcrecpp libpcre16 libpcre32 libssl1.0 libgcc libstdc++ pcre zlib \
